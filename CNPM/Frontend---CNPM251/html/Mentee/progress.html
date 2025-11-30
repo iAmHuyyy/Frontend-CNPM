@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tiến độ học tập</title>
+  <link rel="stylesheet" href="../../Asset/css/Mentee/progress.css" />
+</head>
+<body>
+  <!-- Header sẽ được chèn vào đây -->
+  <div id="header-placeholder"></div>
+
+  <div class="cover"><h1 style="color: white;">TIẾN ĐỘ HỌC TẬP</h1></div>
+  <div class="progress-container">
+
+    <div class="filter-bar">
+      <img src="../../Asset/image/E15.png" alt="Bộ lọc" class="filter-icon" />
+      <label for="subject-filter">Bộ lọc:</label>
+      <label for="subject-filter">Môn học</label>
+      <select id="subject-filter">
+        <option value="">Tất cả</option>
+        <option value="CS101">Nhập môn Lập trình</option>
+        <option value="MATH201">Giải tích 2</option>
+        <option value="ENG301">Tiếng Anh học thuật</option>
+        <option value="PHY101">Vật lý đại cương</option>
+      </select>
+      <button id="search-btn">Tìm kiếm</button>
+    </div>
+
+    <div id="course-grid" class="course-grid">
+      <!-- Các thẻ khóa học sẽ được render tại đây -->
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("../../Asset/header/header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initProfilePanel();
+          initHome();
+        });
+    });
+  </script>
+
+  <script src="../../Js/Mentee/progress.js"></script>
+  <script src="../../Asset/header/sheader.js" defer></script>
+</body>
+</html>

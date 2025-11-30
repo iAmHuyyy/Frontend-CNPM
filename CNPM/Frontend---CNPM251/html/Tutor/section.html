@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danh sách Section</title>
+  <link rel="stylesheet" href="../../Asset/css/Tutor/section.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <div class="container">
+    <h1>SECTION CỦA TÔI</h1>
+    <div id="sectionList" class="section-list"></div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("../../Asset/header/header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initProfilePanel?.();
+          initHome?.();
+        });
+    });
+  </script>
+
+  <script src="../../Js/Tutor/section.js"></script>
+  <script src="../../Asset/header/theader.js" defer></script>
+
+</body>
+</html>

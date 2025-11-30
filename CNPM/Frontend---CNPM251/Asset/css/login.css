@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #FFB569;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-panel, .right-panel {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-panel {
+  background-image: url("../image/E6.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+}
+
+.book-image {
+  max-width: 400px;
+  margin: 0 auto 20px;
+}
+
+.left-panel h1 {
+  font-size: 28px;
+  color: #FF8200;
+  margin-bottom: 10px;
+}
+
+.left-panel h2 {
+  font-size: 22px;
+  color: #FF8200;
+  margin-bottom: 15px;
+}
+
+.left-panel p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.explore-btn {
+  padding: 10px 20px;
+  background-color: #FF8200;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.right-panel {
+  background-color: #ead1b6;
+  text-align: center;
+}
+
+.right-panel h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #FF8200;
+}
+
+.login-btn {
+  padding: 25px;
+  background-color: #FF8200;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.forgot {
+  font-size: 14px;
+  color: #FF8200;
+  text-decoration: none;
+  align-self: flex-end;
+}
+
+.signup-text {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.signup-text a {
+  color: #FF8200;
+  text-decoration: none;
+}
+
+.login-btn:hover{
+    opacity: 0.6;
+}

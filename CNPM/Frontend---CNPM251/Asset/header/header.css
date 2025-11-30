@@ -1,0 +1,155 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #ffe0b2, #ffffff);
+  padding: 20px 30px;
+  border-bottom: 2px solid #eee;
+  font-family: Arial, sans-serif;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo-book {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.site-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f57c00;
+}
+
+.header-center {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.search-bar {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 0 10px;
+  background-color: #ffffff;
+  height: 36px;
+  box-sizing: border-box;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  line-height: 1;
+  height: 100%;
+  margin: 0;
+  background: transparent;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.search-btn img {
+  height: 20px;
+  display: block;
+}
+
+.nav-links {
+  margin-top: 5px;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  padding-right: 70px;
+}
+
+.logo-bk {
+  height: 40px;
+  margin-right: 15px;
+}
+
+.profile-icon {
+  height: 35px;
+  border-radius: 50%;
+}
+
+.profile-panel {
+  position: fixed;
+  top: 100px;
+  right: 40px;
+  width: 250px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  padding: 20px;
+  z-index: 9999;
+  font-size: 14px;
+}
+
+.panel-header {
+  margin-bottom: 10px;
+  color: #FF8200;
+}
+
+.panel-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.panel-menu li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.panel-menu li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+}
+
+.panel-menu li:hover {
+  background-color: #FFB569;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.profile-icon {
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}

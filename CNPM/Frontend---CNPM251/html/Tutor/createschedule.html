@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng ký lịch dạy</title>
+  <link rel="stylesheet" href="../../Asset/css/Tutor/createschedule.css" />
+</head>
+<body>
+
+  <!-- Header sẽ được chèn vào đây -->
+  <div id="header-placeholder"></div>
+
+  <div class="container">
+    <h1>ĐĂNG KÝ LỊCH DẠY</h1>
+
+    <div class="form-group">
+      <label for="studyDate">Ngày học:</label>
+      <input type="date" id="studyDate" />
+    </div>
+
+    <div class="form-group">
+      <label for="startTime">Giờ bắt đầu:</label>
+      <select id="startTime">
+        <option value="">-- Chọn giờ --</option>
+        <option value="07:00">7:00</option>
+        <option value="08:00">8:00</option>
+        <option value="09:00">9:00</option>
+        <option value="10:00">10:00</option>
+        <option value="11:00">11:00</option>
+        <option value="12:00">12:00</option>
+        <option value="13:00">13:00</option>
+        <option value="14:00">14:00</option>
+        <option value="15:00">15:00</option>
+        <option value="16:00">16:00</option>
+        <option value="17:00">17:00</option>
+        <option value="18:00">18:00</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="endTime">Giờ kết thúc:</label>
+      <select id="endTime">
+        <option value="">-- Chọn giờ --</option>
+        <option value="07:00">7:00</option>
+        <option value="08:00">8:00</option>
+        <option value="09:00">9:00</option>
+        <option value="10:00">10:00</option>
+        <option value="11:00">11:00</option>
+        <option value="12:00">12:00</option>
+        <option value="13:00">13:00</option>
+        <option value="14:00">14:00</option>
+        <option value="15:00">15:00</option>
+        <option value="16:00">16:00</option>
+        <option value="17:00">17:00</option>
+        <option value="18:00">18:00</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="slots">Số lượng:</label>
+      <input type="number" id="slots" placeholder="Nhập slots Mentee" min="1" max="150" />
+    </div>
+
+    <button id="addScheduleBtn"> Thêm lịch dạy </button>
+    <button class="backBtn" onclick="history.back()">← Quay lại</button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("../../Asset/header/header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initProfilePanel();
+          initHome();
+        });
+    });
+  </script>
+
+  <script src="../../Js/Tutor/createschedule.js"></script>
+  <script src="../../Asset/header/theader.js" defer></script>
+</body>
+</html>
