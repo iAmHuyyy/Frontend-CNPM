@@ -25,6 +25,8 @@ const { getNotifications } = require('./All/getnotification');
 const { deleteNotification } = require('./All/deletenotification');
 const { deleteFeedback } = require('./Tutor/deletefeedback');
 const { updateUserInfo } = require('./All/update');
+const { getCourseCode } = require('./Mentee/mgetcourse');
+const { replyFeedback } = require('./Tutor/reply');
 
 const app = express();
 app.use(cors());
@@ -43,6 +45,7 @@ app.get('/profile', handleProfile);
 
 // courses
 app.get('/api/courses', getAllCourse);
+app.get('/api/section/:section_id/course-code', getCourseCode);
 
 //section
 app.post('/api/createsection', handleCreateSection);
@@ -69,6 +72,9 @@ app.get('/api/content', getContentBySection);
 app.post('/api/feedback', createFeedback);
 app.get('/api/feedback/tutor', getFeedbackByTutor);
 app.delete('/api/feedback/:feedback_id', deleteFeedback);
+
+//reply
+app.post('/api/feedback/reply', replyFeedback);
 
 //notification
 app.get('/api/notifications', getNotifications);
