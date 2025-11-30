@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thông báo</title>
+  <link rel="stylesheet" href="../../Asset/css/Tutor/notification.css" />
+</head>
+<body>
+
+  <!-- Header sẽ được chèn vào đây -->
+  <div id="header-placeholder"></div>
+
+  <div class="notification-header">
+    <h1>Danh sách Thông báo</h1>
+  </div>
+
+  <div id="notificationList" class="notification-list"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("../../Asset/header/header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initProfilePanel();
+          initHome();
+        });
+    });
+  </script>
+
+  <script src="../../Js/Tutor/notification.js"></script>
+  <script src="../../Asset/header/theader.js" defer></script>
+</body>
+</html>

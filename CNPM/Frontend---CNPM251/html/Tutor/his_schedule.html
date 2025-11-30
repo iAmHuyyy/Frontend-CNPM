@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lịch sử đăng ký lịch dạy</title>
+  <link rel="stylesheet" href="../../Asset/css/Tutor/his_schedule.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <div class="container">
+    <h1>LỊCH SỬ ĐĂNG KÝ LỊCH DẠY</h1>
+
+    <div class="filter-bar">
+      <img src="../../Asset/image/E15.png" alt="Bộ lọc" />
+      <select id="subjectFilter">
+        <option value="">-- Tất cả môn học --</option>
+      </select>
+      <button id="filterBtn">Tìm kiếm</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Môn học</th>
+          <th>Số lượng</th>
+          <th>Ngày học</th>
+          <th>Tiết học</th>
+          <th>Học kỳ</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+      <tbody id="scheduleTableBody">
+        <!-- Dữ liệu sẽ được render bằng JS -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("../../Asset/header/header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initProfilePanel();
+          initHome();
+        });
+    });
+  </script>
+
+  <script src="../../Js/Tutor/his_schedule.js"></script>
+  <script src="../../Asset/header/theader.js" defer></script>
+</body>
+</html>

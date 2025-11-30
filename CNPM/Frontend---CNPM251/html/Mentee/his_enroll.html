@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lịch đã đăng ký</title>
+  <link rel="stylesheet" href="../../Asset/css/Mentee/his_enroll.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <div class="container">
+    <h1>DANH SÁCH LỚP ĐÃ ĐĂNG KÝ</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Môn học</th>
+          <th>Tutor</th>
+          <th>Học kỳ</th>
+          <th>Ngày đăng ký</th>
+          <th>Trạng thái</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+      <tbody id="enrollTableBody">
+        <!-- Render bằng JS -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("../../Asset/header/header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initProfilePanel();
+          initHome();
+        });
+    });
+  </script>
+
+  <script src="../../Js/Mentee/his_enroll.js"></script>
+  <script src="../../Asset/header/sheader.js" defer></script>
+</body>
+</html>

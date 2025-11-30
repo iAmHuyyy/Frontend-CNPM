@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #fff3e0, #ffe0b2);
+  color: #333;
+}
+
+.notification-header {
+  background-color: #FF8200;
+  color: white;
+  padding: 20px;
+  margin-top: 106px;
+  text-align: center;
+}
+
+.notification-header h1 {
+  margin: 0;
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.notification-list {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.notification-card {
+  background-color: #fff;
+  border-left: 6px solid #FF8200;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.notification-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.notification-card h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #d43f3a;
+}
+
+.notification-card p {
+  margin: 4px 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.notification-card .delete-btn {
+  margin-top: 12px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #e74c3c;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.notification-card .delete-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+.notification-card .delete-btn:active {
+  background-color: #a93226;
+  transform: scale(0.95);
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

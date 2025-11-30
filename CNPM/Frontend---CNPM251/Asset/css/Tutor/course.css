@@ -1,0 +1,84 @@
+html{
+  width: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff4e6;
+  margin: 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 109px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #d35400;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.filter-icon {
+  width: 40px;
+  height: 30px;
+}
+
+select, button {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #d35400;
+}
+
+#filterBtn{
+  background-color: #e67e22;
+}
+
+#filterBtn:hover{
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #ffe0cc;
+  color: #333;
+}
+
+button.register-btn {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.register-btn:hover {
+  background-color: #e67e22;
+}

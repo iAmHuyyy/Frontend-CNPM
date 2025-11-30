@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tạo Section</title>
+  <link rel="stylesheet" href="../../Asset/css/Tutor/createsection.css" />
+</head>
+<body>
+
+  <!-- Header sẽ được chèn vào đây -->
+  <div id="header-placeholder"></div>
+
+  <div class="container">
+    <h1>TẠO SECTION MỚI</h1>
+
+    <div class="form-group">
+      <label for="sectionCode">Mã Section:</label>
+      <input type="text" id="sectionCode" placeholder="Nhập mã section (ví dụ: SE01)" />
+    </div>
+
+    <div class="form-group">
+        <label for="semester">Học kỳ:</label>
+        <input type="text" id="semester" placeholder="Nhập học kỳ (ví dụ: HK251)" />
+        </div>
+
+        <button id ="createBtn">Tạo Section</button>
+
+        <div id="backBtn">
+        <button class = "backBtn"  onclick="history.back()">← Quay lại</button>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("../../Asset/header/header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initProfilePanel();
+          initHome();
+        });
+    });
+    </script>
+
+  <script src="../../Js/Tutor/createsection.js"></script>
+  <script src="../../Asset/header/theader.js" defer></script>
+</body>
+</html>

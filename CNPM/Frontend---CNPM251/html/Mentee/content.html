@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nội dung học phần</title>
+  <link rel="stylesheet" href="../../Asset/css/Tutor/content.css" />
+</head>
+<body>
+
+  <!-- Header sẽ được chèn vào đây -->
+  <div id="header-placeholder"></div>
+     
+  <div class="course-header">
+    <h1 id="courseTitle">NỘI DUNG KHÓA HỌC</h1>
+    <div class="action-buttons">
+      <button id="feedbackBtn" onclick="window.location.href='feedback.html'">Gửi Feedback</button>
+      <button id="documentBtn" onclick="window.location.href='document.html'">Tài liệu HCMUT_LIBRARY</button>
+      <button id="backBtn" class="back-button" onclick="history.back()"> Quay lại</button>
+    </div>
+  </div>
+
+  <div id="contentList" class="content-list"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("../../Asset/header/header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initProfilePanel();
+          initHome();
+        });
+    });
+  </script>
+
+  <script src="../../Js/Tutor/content.js"></script>
+  <script src="../../Asset/header/sheader.js" defer></script>
+</body>
+</html>
