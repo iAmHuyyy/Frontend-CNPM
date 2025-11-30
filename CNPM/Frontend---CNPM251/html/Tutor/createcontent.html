@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thêm nội dung học phần</title>
+  <link rel="stylesheet" href="../../Asset/css/Tutor/createcontent.css" />
+</head>
+<body>
+
+  <!-- Header sẽ được chèn vào đây -->
+  <div id="header-placeholder"></div>
+
+  <div class="form-container">
+    <h1>Thêm nội dung học phần</h1>
+
+    <form id="createContentForm">
+      <div class="form-group">
+        <label for="position">Vị trí (1 = Thông tin chung, 2 = Topic 1...)</label>
+        <input type="number" id="position" name="position" min="0" required />
+      </div>
+
+      <div class="form-group">
+        <label for="title">Tiêu đề</label>
+        <input type="text" id="title" name="title" required />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Mô tả</label>
+        <textarea id="description" name="description" rows="6" required></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit">Xác nhận</button>
+        <button type="button" onclick="window.history.back()">Quay lại</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("../../Asset/header/header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initProfilePanel();
+          initHome();
+        });
+    });
+  </script>
+
+  <script src="../../Js/Tutor/createcontent.js"></script>
+  <script src="../../Asset/header/theader.js" defer></script>
+</body>
+</html>

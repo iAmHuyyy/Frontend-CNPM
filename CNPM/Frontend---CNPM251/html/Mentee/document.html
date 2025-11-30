@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tài liệu học phần</title>
+  <link rel="stylesheet" href="../../Asset/css/Mentee/document.css" />
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <div class="container">
+    <div class="start">
+        <h1>Tài liệu môn học</h1>
+        <button id="backBtn" class="back-button" onclick="history.back()"> Quay lại</button>
+    </div>
+    <div id="document-content">
+      <p>Đang tải tài liệu...</p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("../../Asset/header/header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initProfilePanel();
+          initHome();
+        });
+    });
+  </script>
+
+  <script src="../../Js/Mentee/document.js"></script>
+  <script src="../../Asset/header/sheader.js" defer></script>
+</body>
+</html>

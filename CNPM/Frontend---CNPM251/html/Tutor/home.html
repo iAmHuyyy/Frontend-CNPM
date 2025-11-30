@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trang chủ - Tutor Mentee Support System</title>
+  <link rel="stylesheet" href="../../Asset/css/Tutor/home.css">
+</head>
+<body>
+  <!-- Header sẽ được chèn vào đây -->
+  <div id="header-placeholder"></div>
+
+  <!-- Nội dung chính -->
+  <main>
+    <div class="hero">
+      <div class="hero-content">
+        <h1>Tutor Mentee Support System</h1>
+        <p>
+          Chương trình hỗ trợ học tập tại HCMUT thông qua sự hướng dẫn từ giảng viên,
+          nghiên cứu sinh và sinh viên xuất sắc.
+        </p>
+        <button class="register-btn" onclick="window.location.href='section.html'">ĐĂNG KÝ LỊCH DẠY</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("../../Asset/header/header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initProfilePanel();
+          initHome();
+        });
+    });
+  </script>
+
+  <script src="../../Asset/header/theader.js" defer></script>
+</body>
+</html>

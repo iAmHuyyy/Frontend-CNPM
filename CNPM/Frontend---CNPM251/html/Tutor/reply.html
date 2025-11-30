@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gửi phản hồi khóa học</title>
+  <link rel="stylesheet" href="../../Asset/css/Tutor/reply.css" />
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <div class="feedback-container">
+    <h1>Gửi phản hồi cho sinh viên</h1>
+
+    <form id="feedbackForm">
+      <div class="form-group">
+        <label for="description">Nội dung phản hồi</label>
+        <textarea id="description" name="description" rows="12" required></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit">Gửi phản hồi</button>
+        <button type="button" onclick="window.history.back()">Quay lại</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("../../Asset/header/header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initProfilePanel?.();
+          initHome?.();
+        });
+    });
+  </script>
+
+  <script src="../../Js/Tutor/reply.js"></script>
+  <script src="../../Asset/header/theader.js" defer></script>
+</body>
+</html>
