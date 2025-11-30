@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dịch vụ xác thực tập trung</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="login-container">
+    <img src="E1.png" alt="Logo Bách Khoa" class="logo">
+    <h1>DỊCH VỤ XÁC THỰC TẬP TRUNG</h1>
+    <p class="subtitle">Nhập thông tin tài khoản của bạn</p>
+
+    <form class="login-form">
+      <label for="username">Tên tài khoản</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Mật khẩu</label>
+      <input type="password" id="password" name="password" required>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="warn" name="warn">
+        <label for="warn">Cảnh báo trước khi tôi đăng nhập vào các trang web khác.</label>
+      </div>
+
+      <div class="button-group">
+        <button type="submit" class="login-btn">Đăng nhập</button>
+        <button type="reset" class="clear-btn">Xóa</button>
+      </div>
+
+      <a href="#" class="change-password">Thay đổi mật khẩu?</a>
+    </form>
+
+    <div class="language-switch">
+      Ngôn ngữ: <a href="#">Tiếng Việt</a> | <a href="#">Tiếng Anh</a>
+    </div>
+
+    <div class="note">
+      <p>
+        Trang đăng nhập này cho phép đăng nhập một lần đến nhiều hệ thống web ở Trường Đại học Bách Khoa-ĐHQG-HCM.
+        Điều này có nghĩa là bạn chỉ đăng nhập một lần cho những hệ thống web đã đăng ký với hệ thống xác thực quản lý truy cập tập trung.
+      </p>
+      <p>
+        Bạn cần dùng tài khoản HCMUT để đăng nhập. Tài khoản HCMUT cho phép truy cập đến nhiều tài nguyên bao gồm hệ thống thông tin, thư điện tử, ...
+      </p>
+      <p>
+        Vì lý do an ninh, bạn hãy Thoát khỏi trình duyệt Web khi bạn kết thúc việc truy cập các dịch vụ đòi hỏi xác thực!
+      </p>
+    </div>
+
+    <div class="support">
+      <p><strong>Hỗ trợ kỹ thuật</strong></p>
+      <p>E-mail: support@hcmut.edu.vn</p>
+      <p>ĐT: (84-8) 38647256 - 7204</p>
+    </div>
+
+    <footer>
+      Bản quyền © 2011 - 2012 Trường Đại học Bách khoa - ĐHQG-HCM. Được hỗ trợ bởi Jasig CAS 3.5.1
+    </footer>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
